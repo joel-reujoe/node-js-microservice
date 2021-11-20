@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+
+package todoPackage;
+
+
+
+service Todo {
+    rpc CreateToDo (ToDoItem) returns (ToDoItem);
+    rpc CreateUser (User) returns (User);
+    rpc UpdateUser (User) returns (User);
+    rpc GetUsers(Empty) returns (UserList);
+    rpc GetUser (Integer) returns (User);
+
+
+}
+
+message Empty {
+}
+
+
+message Integer {
+    int32 Id=1;
+}
+message User {
+    int32 Id=1;
+    string FirstName=2;
+    int32 Age=3;
+}
+
+
+message UserList {
+    repeated User Users = 1;
+}
+
+message ToDoItem {
+    int32 Id=1;
+    string Text=2;
+}
+
+message ToDoItems {
+    repeated ToDoItem items=1; 
+}
