@@ -13,7 +13,7 @@ client.send('Message', function(err) { console.log('Sent') })
 
 client.send({ short_message: 'Message', facility: 'myApp', level: gelfling.INFO })
 
-var complexClient = gelfling('localhost', 12201, {
+var complexClient = gelfling('34.136.37.30', 12201, {
   defaults: {
     facility: 'myApp',
     level: gelfling.CRITICAL,

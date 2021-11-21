@@ -1,8 +1,8 @@
 const { loadClient } = require('newj-core/ProtoUtil')
-const client = loadClient('todo.proto',"localhost:3000")
+const client = loadClient('todo.proto',"34.136.37.30:3000")
 
 
-client.CreateUser({
+client.GetUsers({
     "Id":-1,
     "FirstName":"joel dsouza",
     "Age":25
